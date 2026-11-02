@@ -11,6 +11,18 @@ base { archivesName = 'symbiotevoice-forge-1.20.1' }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
+sourceSets {
+    main {
+        java {
+            srcDirs = ['.']
+            include '*.java'
+        }
+        resources {
+            srcDirs = []
+        }
+    }
+}
+
 minecraft {
     mappings channel: 'official', version: '1.20.1'
     runs {
@@ -37,6 +49,8 @@ dependencies {
 
 tasks.named('processResources') {
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    from('mods.toml') { into 'META-INF' }
+    from('pack.mcmeta')
 }
 
 tasks.named('jar') {
