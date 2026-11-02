@@ -1,0 +1,37 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="symbiotevoice"
+version="1.0.0"
+displayName="Symbiote Voice"
+description='''Talk to your symbiote with Simple Voice Chat. It answers out loud through an AI, in a deep voice that differs per strain.'''
+
+[[dependencies.symbiotevoice]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.symbiotevoice]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.symbiotevoice]]
+modId="voicechat"
+mandatory=true
+versionRange="[2.5.0,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.symbiotevoice]]
+modId="symbiote"
+mandatory=false
+versionRange="[1.1,)"
+ordering="AFTER"
+side="BOTH"
